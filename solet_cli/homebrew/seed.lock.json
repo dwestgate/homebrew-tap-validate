@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "repository": "https://github.com/dwestgate/2026-09-10_local_bizops_cli_unavailable_6a84575.git",
+  "release_tag": "validation-2026-09-10-cli-unavailable",
+  "commit": "6a8457585420465ec7a1f3774bf2c4dbac3bd4ad",
+  "tree_hash": "dc916779244b83cf6a511b3cdd19dcbd1163220f",
+  "archive_sha256": "89c47ee35a79d3c8601dfa29ecf3d8af2cbf7f6d39ac2162621d85c940b82108",
+  "profile": "macos-bizops"
+}
