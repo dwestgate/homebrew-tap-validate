@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "repository": "https://github.com/dwestgate/2026-09-10_local_bizops_pull_inference_ffdb326.git",
-  "release_tag": "validation-2026-09-10-pull-inference",
-  "commit": "ffdb32612ce2903a07af03126ac1f63e378dd375",
-  "tree_hash": "52469e5aea1b88520be46ae92eb193678519d4af",
-  "archive_sha256": "f5e83e2de68a77c79fcd93d234452b1e1129f6ee21283c409f4946a365bd311f",
+  "repository": "https://github.com/dwestgate/2026-09-11_local_bizops_146dfa4e.git",
+  "release_tag": "release-2026-09-11",
+  "commit": "146dfa4ebb00cd5f9e27f74e33335938940a41bb",
+  "tree_hash": "c3011cbdaa2a3dcde2700bc68aeed39a723a78b9",
+  "archive_sha256": "5bac5f3e45eeba161d9b4c2714d62699c780c9975e37f2d086ba7ee1ef83ad3a",
   "profile": "macos-bizops"
 }
