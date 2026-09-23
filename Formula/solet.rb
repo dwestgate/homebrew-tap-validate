@@ -3,10 +3,10 @@ class Solet < Formula
 
   desc "Create and operate local Solet instances"
   homepage "https://solet.ai"
-  url "https://github.com/dwestgate/homebrew-tap-validate/releases/download/manager-v0.1.0-validate-session-sources-20260911/solet-0.1.0.tar.gz"
-  sha256 "5bac5f3e45eeba161d9b4c2714d62699c780c9975e37f2d086ba7ee1ef83ad3a"
+  url "https://github.com/dwestgate/homebrew-tap-validate/releases/download/manager-v0.1.0-r44/solet-0.1.0-r44.tar.gz"
+  sha256 "400f23376dd4f4329cf2496c57569885820ae0d263f0091dd45dc8ed6180e59e"
   license "Apache-2.0"
-
+  revision 1
   depends_on "git"
   depends_on "python@3.13"
 
@@ -50,19 +50,36 @@ class Solet < Formula
       "plugins/github_midwife_plugin/knowledge_base/setup_journal.schema.json",
       "plugins/github_midwife_plugin/knowledge_base/setup_adapter_envelope.schema.json",
       "plugins/github_midwife_plugin/knowledge_base/permissions_manifest.json",
+      "plugins/github_midwife_plugin/knowledge_base/existing_install_flow.json",
+      "plugins/github_midwife_plugin/knowledge_base/existing_install_flow.schema.json",
     ]
     # Homebrew's build sandbox forbids reading the tap checkout while a Formula
     # installs. Render the same reviewed lock bytes into the Formula so the
     # default lock remains non-circular without crossing that sandbox boundary.
     (libexec/"share"/"solet"/"seed.lock.json").write <<~JSON
       {
+        "schema_version": 3,
+        "channel_id": "stable",
+        "repository": "https://github.com/solet-public/macos-bizops-daily.git",
+        "release_tag": "release-2026-09-23-bfa4b220957b",
+        "commit": "bfa4b220957bea9f848d56ff0a27f556471694c1",
+        "tree_hash": "3dff0ecd97e257f093fbd38de1bc639cf9b4f51e",
+        "archive_sha256": "400f23376dd4f4329cf2496c57569885820ae0d263f0091dd45dc8ed6180e59e",
+        "profile": "macos-bizops",
+        "provenance": {"bundle_name":"macos-bizops","manifest_sha256":"6af4e689b3f1519b5a31eb854172aca354ecb79892acc24c84cd4c08d1c348c7","origin_id":"31bfa93c-fe20-4988-b019-f8186684e88e","platform":"local","provenance_sha256":"e91c784310b292da4a54fb0c913a821f36ee35e6487aa91eea9d0d40e90a8f16","schema_version":1,"seed_id":"2f1fd68a-2740-5aa8-8b51-56b436248096","source_commit":"0a7514692be805942b31962128ec4211d1fa9eb2","source_date":"2026-09-23T15:07:17-07:00"},
+        "existing_install_contract": {"bundle_digest":"sha256:89b874b95f90aa586b7fe9a0aa3c1fc6027236dbea93fcfcb520e8930ac42ff8","flow_id":"existing-install","flow_schema_version":1},
+        "allowed_repository_migrations": []
+      }
+    JSON
+    # This installed receipt distinguishes a worktree-payload experiment from
+    # a published manager/seed pair.  It is deliberately independent of the
+    # seed lock: the latter authenticates the seed, while this records how the
+    # manager archive itself reached this keg.
+    (libexec/"share"/"solet"/"install-source.json").write <<~JSON
+      {
         "schema_version": 1,
-        "repository": "https://github.com/dwestgate/2026-09-11_local_bizops_146dfa4e.git",
-        "release_tag": "release-2026-09-11",
-        "commit": "146dfa4ebb00cd5f9e27f74e33335938940a41bb",
-        "tree_hash": "c3011cbdaa2a3dcde2700bc68aeed39a723a78b9",
-        "archive_sha256": "5bac5f3e45eeba161d9b4c2714d62699c780c9975e37f2d086ba7ee1ef83ad3a",
-        "profile": "macos-bizops"
+        "mode": "release",
+        "source_commit": "0a7514692be805942b31962128ec4211d1fa9eb2"
       }
     JSON
     # `install_symlink` records a path, not bytes — safe for a source build,
@@ -72,6 +89,7 @@ class Solet < Formula
     # that only exists on the machine that built the bottle.
     (libexec/"share"/"solet").install_symlink Pathname(__dir__).parent/"solet_cli"/"homebrew"/"seeds" => "seeds"
     bin.install_symlink libexec/"bin"/"solet"
+    bin.install_symlink libexec/"bin"/"solet-manager"
   end
 
   def caveats
@@ -99,6 +117,7 @@ class Solet < Formula
     assert_match '"status": "preview_ready"', preview
     assert_match '"dry_run_writes": 0', preview
     assert_path_exists libexec/"share"/"solet"/"seed.lock.json"
+    assert_path_exists libexec/"share"/"solet"/"install-source.json"
     assert_path_exists libexec/"share"/"solet"/"contracts"/"macos_setup_flow.json"
     refute_path_exists testpath/"Solets"/"brew-test"
   end
