@@ -3,10 +3,10 @@ class Solet < Formula
 
   desc "Create and operate local Solet instances"
   homepage "https://solet.ai"
-  url "https://github.com/dwestgate/homebrew-tap-validate/releases/download/manager-v0.1.0-r44/solet-0.1.0-r44.tar.gz"
-  sha256 "400f23376dd4f4329cf2496c57569885820ae0d263f0091dd45dc8ed6180e59e"
+  url "https://github.com/dwestgate/homebrew-tap-validate/releases/download/manager-v0.1.0-r45/solet-0.1.0-r45.tar.gz"
+  sha256 "61c10e60640c72e27432d14f614a8411db5f03329a1a8a648a8f720667cab58e"
   license "Apache-2.0"
-  revision 1
+  revision 2
   depends_on "git"
   depends_on "python@3.13"
 
@@ -61,13 +61,13 @@ class Solet < Formula
         "schema_version": 3,
         "channel_id": "stable",
         "repository": "https://github.com/solet-public/macos-bizops-daily.git",
-        "release_tag": "release-2026-09-23-bfa4b220957b",
-        "commit": "bfa4b220957bea9f848d56ff0a27f556471694c1",
-        "tree_hash": "3dff0ecd97e257f093fbd38de1bc639cf9b4f51e",
-        "archive_sha256": "400f23376dd4f4329cf2496c57569885820ae0d263f0091dd45dc8ed6180e59e",
+        "release_tag": "release-2026-09-25-0aa634003256",
+        "commit": "0aa6340032560793c47843ab9a33b6c12b6cecf5",
+        "tree_hash": "9ed1936880eab496da5320ff3c3e16dbf9e06d5b",
+        "archive_sha256": "61c10e60640c72e27432d14f614a8411db5f03329a1a8a648a8f720667cab58e",
         "profile": "macos-bizops",
-        "provenance": {"bundle_name":"macos-bizops","manifest_sha256":"6af4e689b3f1519b5a31eb854172aca354ecb79892acc24c84cd4c08d1c348c7","origin_id":"31bfa93c-fe20-4988-b019-f8186684e88e","platform":"local","provenance_sha256":"e91c784310b292da4a54fb0c913a821f36ee35e6487aa91eea9d0d40e90a8f16","schema_version":1,"seed_id":"2f1fd68a-2740-5aa8-8b51-56b436248096","source_commit":"0a7514692be805942b31962128ec4211d1fa9eb2","source_date":"2026-09-23T15:07:17-07:00"},
-        "existing_install_contract": {"bundle_digest":"sha256:89b874b95f90aa586b7fe9a0aa3c1fc6027236dbea93fcfcb520e8930ac42ff8","flow_id":"existing-install","flow_schema_version":1},
+        "provenance": {"bundle_name":"macos-bizops","manifest_sha256":"6af4e689b3f1519b5a31eb854172aca354ecb79892acc24c84cd4c08d1c348c7","origin_id":"31bfa93c-fe20-4988-b019-f8186684e88e","platform":"local","provenance_sha256":"1400eeb003cb1d4b52a34e9613ee008d00cd44b294696ce2ffb472a6733d3f33","schema_version":1,"seed_id":"66f23e63-7cdb-501f-b090-a26ee954c1f1","source_commit":"f9f822c5c702e0087ba51126df0939ef216d3fd5","source_date":"2026-09-25T13:55:45-07:00"},
+        "existing_install_contract": {"bundle_digest":"sha256:d960a3b7cf28282c37d663c4ca6e47fb67e73aaade810ba0dc02c40a5a5e712f","flow_id":"existing-install","flow_schema_version":1},
         "allowed_repository_migrations": []
       }
     JSON
@@ -79,7 +79,7 @@ class Solet < Formula
       {
         "schema_version": 1,
         "mode": "release",
-        "source_commit": "0a7514692be805942b31962128ec4211d1fa9eb2"
+        "source_commit": "f9f822c5c702e0087ba51126df0939ef216d3fd5"
       }
     JSON
     # `install_symlink` records a path, not bytes — safe for a source build,
