@@ -3,10 +3,10 @@ class Solet < Formula
 
   desc "Create and operate local Solet instances"
   homepage "https://solet.ai"
-  url "https://github.com/dwestgate/homebrew-tap-validate/releases/download/manager-v0.1.0-r46/solet-0.1.0-r46.tar.gz"
-  sha256 "22e2722d7950eb7f4a3a366bb02f890f3f6f6e8f9892f1de64ff966140490e51"
+  url "https://github.com/dwestgate/homebrew-tap-validate/releases/download/manager-v0.1.0-r47/solet-0.1.0-r47.tar.gz"
+  sha256 "111352c71a4a8ea88dff7ca70d2dd73853d2e81ed67cb316a7db1ba1b3822eba"
   license "Apache-2.0"
-  revision 4
+  revision 5
   depends_on "git"
   depends_on "python@3.13"
 
@@ -64,7 +64,7 @@ class Solet < Formula
         "release_tag": "release-2026-09-27-0a0388214130",
         "commit": "0a03882141300438aae8ab87e186a6e61dc3fd28",
         "tree_hash": "85e0710ba4bc09b3e4f4a6c1b39b8556bf186a5a",
-        "archive_sha256": "22e2722d7950eb7f4a3a366bb02f890f3f6f6e8f9892f1de64ff966140490e51",
+        "archive_sha256": "111352c71a4a8ea88dff7ca70d2dd73853d2e81ed67cb316a7db1ba1b3822eba",
         "profile": "macos-bizops",
         "provenance": {"bundle_name":"macos-bizops","manifest_sha256":"4313473f243ec471da100c2e2d724a581ff9501d26e1d35e1cd57ffcad930557","origin_id":"31bfa93c-fe20-4988-b019-f8186684e88e","platform":"local","provenance_sha256":"a22a62f8a0d3c46014fbe94f79f138925b87a135248f7ef579226be9f95486c1","schema_version":1,"seed_id":"4d4b9e92-21c2-5fe3-8588-f4d28cd38473","source_commit":"af39a9f45ab3107721e2df126ea5e6de41c1fbdc","source_date":"2026-09-27T04:04:42-07:00"},
         "existing_install_contract": {"bundle_digest":"sha256:d960a3b7cf28282c37d663c4ca6e47fb67e73aaade810ba0dc02c40a5a5e712f","flow_id":"existing-install","flow_schema_version":1},
@@ -83,7 +83,7 @@ class Solet < Formula
         "channels": [
           {
             "channel_id": "stable",
-            "seed_lock_sha256": "662f326355007a0f2856ff95489511aee278c19a7ed568e8e7e836495e747665"
+            "seed_lock_sha256": "b4ac32ef1fe421322b243a6a41a22f103bee4a949e3fd551c8cddba0c0a6dbe0"
           }
         ]
       }
@@ -96,7 +96,7 @@ class Solet < Formula
       {
         "schema_version": 1,
         "mode": "release",
-        "source_commit": "1d7ae9a101214cdf67784b5aa07320cf6ba759f4"
+        "source_commit": "77e9f81c183e4e30851c22e41f2c0da0b5572a79"
       }
     JSON
     # `install_symlink` records a path, not bytes — safe for a source build,
