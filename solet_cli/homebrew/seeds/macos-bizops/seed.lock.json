@@ -2,12 +2,12 @@
   "schema_version": 3,
   "channel_id": "stable",
   "repository": "https://github.com/solet-public/macos-bizops-daily.git",
-  "release_tag": "release-2026-09-28-128f224414bb",
-  "commit": "128f224414bb6f5f987105eb05bb525235eaf363",
-  "tree_hash": "049562f44a706418c8ddc18e91faed87ac8a69fb",
-  "archive_sha256": "7f3a82330a52b33c35a2cb998423315543eec8ba90cdd98d85fe808ed073df3a",
+  "release_tag": "release-2026-09-28-14c32a6188d2",
+  "commit": "14c32a6188d2ea0b295cf0436edd370d7c52fc7d",
+  "tree_hash": "74ea8f1745417a65805fadc08c602091392d6d9b",
+  "archive_sha256": "57ef106e797bd86939327ea789f5ce59553a213ab36fb34afbbde3bf6251d848",
   "profile": "macos-bizops",
-  "provenance": {"bundle_name":"macos-bizops","manifest_sha256":"0368e9df42c33ae5e7201510aebf300131bb354861b0989d8d6bc96c290a8eed","origin_id":"31bfa93c-fe20-4988-b019-f8186684e88e","platform":"local","provenance_sha256":"28ccf396cf9f66a779a48ac23a6067b99fbec874f7a64279834564a0cf406975","schema_version":1,"seed_id":"64410721-d48f-582c-a986-6cd5e1de24ab","source_commit":"ae8180ee7fff9eb4412de28c0b9644550c328baf","source_date":"2026-09-28T04:00:22-07:00"},
+  "provenance": {"bundle_name":"macos-bizops","manifest_sha256":"5ef8fb6aa2d559f881625c9f550d9a6b9d6f08d481aacc45e7754c80faebb5f4","origin_id":"31bfa93c-fe20-4988-b019-f8186684e88e","platform":"local","provenance_sha256":"a82264ae5b584ac6426627647e8f27fcd944f6e10f63763d74a583a578d85cce","schema_version":1,"seed_id":"1c7f3820-82f7-5c62-877d-fbcb7d378e86","source_commit":"396702a4d62b136efbdcc1fc434a66dfd2aeb86a","source_date":"2026-09-28T07:08:33-07:00"},
   "existing_install_contract": {"bundle_digest":"sha256:d960a3b7cf28282c37d663c4ca6e47fb67e73aaade810ba0dc02c40a5a5e712f","flow_id":"existing-install","flow_schema_version":1},
   "allowed_repository_migrations": []
 }
